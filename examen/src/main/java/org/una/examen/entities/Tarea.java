@@ -49,14 +49,12 @@ public class Tarea implements Serializable {
     @Column(length = 100)
     private String descripcion;
 
-    @Column(name = "fecha_inicio"/*, updatable = false*/)
+    @Column(name = "fecha_inicio")
     @Temporal(TemporalType.TIMESTAMP)
-  //  @Setter(AccessLevel.NONE)
     private Date fechaInicio;
 
-    @Column(name = "fecha_finalizacion"/*, updatable = false*/)
+    @Column(name = "fecha_finalizacion")
     @Temporal(TemporalType.TIMESTAMP)
-    //@Setter(AccessLevel.NONE)
     private Date fechaFinalizacion;
 
     @Column
@@ -71,15 +69,5 @@ public class Tarea implements Serializable {
     @ManyToOne
     @JoinColumn(name = "proyecto")
     private Proyecto proyecto;
-//
-//    @PrePersist
-//    public void prePersist() {
-//        fechaInicio = new Date();
-//        fechaFinalizacion = new Date();
-//    }
-//
-//    @PreUpdate
-//    public void preUpdate() {
-//        fechaFinalizacion = new Date();
-//    }
+
 }

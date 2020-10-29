@@ -49,27 +49,15 @@ public class Proyecto implements Serializable {
     @Column(length = 50)
     private String nombre;
     
-    @Column(name = "fecha_inicio"/*, updatable = false*/)
+    @Column(name = "fecha_inicio")
     @Temporal(TemporalType.TIMESTAMP)
-  //  @Setter(AccessLevel.NONE)
     private Date fechaInicio;
 
-    @Column(name = "fecha_finalizacion"/*, updatable = false*/)
+    @Column(name = "fecha_finalizacion")
     @Temporal(TemporalType.TIMESTAMP)
-   // @Setter(AccessLevel.NONE)
     private Date fechaFinalizacion;
     
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "proyecto") 
     private List<Tarea> tarea = new ArrayList<>();
-    
-//    @PrePersist
-//    public void prePersist() {
-//        fechaInicio = new Date();
-//        fechaFinalizacion = new Date();
-//    }
-//
-//    @PreUpdate
-//    public void preUpdate() {
-//        fechaFinalizacion = new Date();
-//    }
+
 }

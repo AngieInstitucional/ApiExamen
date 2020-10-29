@@ -80,17 +80,4 @@ public class ProyectoController {
         }
     }
 
-//    @PutMapping("/inactivar/{id}")
-//    @ResponseBody
-//    public ResponseEntity<?> inactivate(@RequestBody ProyectoDTO Inactivar, @PathVariable("id") Long id) {
-//        try {
-//            Optional<ProyectoDTO> update = proyectoService.update(Inactivar, id);
-//            if (update.isPresent()) {
-//                return new ResponseEntity<>(update, HttpStatus.OK);
-//            }
-//            return new ResponseEntity<>("No se encontro el proyecti a inativar", HttpStatus.NOT_FOUND);
-//        }catch (Exception e) {
-//            return new ResponseEntity<>(e, HttpStatus.INTERNAL_SERVER_ERROR);
-//        }
-//    }
 }
